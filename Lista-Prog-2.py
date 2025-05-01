@@ -176,6 +176,7 @@ while V1<3 and VPC<3:
     N2 = N+2
     #Se forem IGUAIS, ninguém ganha
     if PC == N:
+        print("Empate!")
         continue
     #Caso N seja 3, quando fizer N2 = N+2, resultará em um valor fora da lista. Mas, como seria uma "lista
     #circular", então, eu forço N2 a virar o primeiro termo.
@@ -196,7 +197,14 @@ while V1<3 and VPC<3:
     if L[N] == L[PC1] or L[N] == L[PC2]:
     #Mesma coisa, mas em caso que o valor da posição PC seja o mesmo que o do N+1 ou N+2, então PC ganha
         V1+=1
+        print("Ponto pro jogador!\n{} ganha de {}".format(L[N], L[PC]))
     if L[PC] == L[N1] or L[PC] == L[N2]:
         VPC+=1
+        print("Ponto pro jogador!\n{} ganha de {}".format(L[PC], L[N]))
     #Zero todos os valores que somei 1 ou 2
     PC1=PC2=N1=N2=0
+if V1 == 3:
+    print("Jogador Ganhou!")
+else:
+    print("Computador Ganhou!")
+print("Resultado = {} a {}".format(max(V1,VPC), min(V1,VPC)))
