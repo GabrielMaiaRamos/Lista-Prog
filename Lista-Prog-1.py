@@ -34,7 +34,9 @@
 # V) True and True = True  
 # VI) False or True = True  
 # Resultado: True 
-# ========3=========  
+
+# ========3=========
+
 #a) Área do cubo  
 A = float(input("Digite a Aresta: "))  
 print(6*A**2)
@@ -74,8 +76,6 @@ elif B==C:
     print(A+C)  
 else:  
     print(A+B+C)
-
-#=======3========
 
 #e)  
 A = int(input())  
