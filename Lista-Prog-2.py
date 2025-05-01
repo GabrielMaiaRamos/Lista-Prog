@@ -197,14 +197,14 @@ while V1<3 and VPC<3:
     if L[N] == L[PC1] or L[N] == L[PC2]:
     #Mesma coisa, mas em caso que o valor da posição PC seja o mesmo que o do N+1 ou N+2, então PC ganha
         V1+=1
-        print("Ponto pro jogador!\n{} ganha de {}".format(L[N], L[PC]))
+        print("\033[1;32mPonto pro jogador!\033[m\n{} ganha de {}\n".format(L[N], L[PC]))
     if L[PC] == L[N1] or L[PC] == L[N2]:
         VPC+=1
-        print("Ponto pro jogador!\n{} ganha de {}".format(L[PC], L[N]))
+        print("\033[1;31mPonto pro PC!\033[m\n{} ganha de {}\n".format(L[PC], L[N]))
     #Zero todos os valores que somei 1 ou 2
     PC1=PC2=N1=N2=0
 if V1 == 3:
-    print("Jogador Ganhou!")
+    print("\n\033[1;32mJogador Ganhou!\033[m")
 else:
-    print("Computador Ganhou!")
+    print("\n\033[1;31mComputador Ganhou!\033[m")
 print("Resultado = {} a {}".format(max(V1,VPC), min(V1,VPC)))
