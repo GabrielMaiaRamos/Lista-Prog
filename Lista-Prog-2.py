@@ -149,14 +149,12 @@ while W:
     N = int(input("Digite o n: "))
     M = int(input("Digite o m: "))
     for i in range(1, N+1):
-        print("i=", i)
         for j in range(1, M+1):
-            print("j=", j)
             S += (i**2 * j)/(3**i * (j*3**i + i*3**j))
-            print(f"i= {i} e j= {j}, entao S = {S}")
+    print(S)
     PERG = input("deseja continuar? ").lower()
     if PERG in "nao, não":
-       Q = False
+       W = False
 
 #========7========
 from random import randint
